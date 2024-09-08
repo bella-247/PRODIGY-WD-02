@@ -2,12 +2,12 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    // outline: 1px solid lime;
 }
 
 :root{
     font-size: 16px;
     --primary-gold: #ffc800;
+    --primary-gold-dark: #eeb500;
 }
 body{
     background-color: black;
@@ -17,8 +17,8 @@ body{
     align-items: center;
     min-height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
+    padding: 50px 20px;
 }
-
 
 .container{
     display: flex;
@@ -45,10 +45,14 @@ body{
         .btns{
             padding: 10px 25px;
             border: none;
-            background: orange;
+            background: var(--primary-gold);
             font-size: 1rem;
             border-radius: 1000rem;
             cursor: pointer;
+            transition: background 200ms ;
+            &:hover{
+                background: var(--primary-gold-dark);
+            }
             &:disabled{
                 background: #999;
                 cursor: not-allowed;
@@ -71,20 +75,22 @@ body{
             }
         }
         .laps{
-            background: #9993;
+            height: 200px;
+            overflow-y: auto;
             .lap{
                 @extend .tabs;
                 border: none;
                 span{
                     padding:0 10px;
                 }
+                background: #9993;
                 &:nth-of-type(even){
                     background-color: #9995;
                 }
             }
         }
         &:has(.laps:empty){
-            display: none;
+            visibility: hidden;
         }
     }
 }

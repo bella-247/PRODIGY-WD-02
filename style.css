@@ -7,6 +7,7 @@
 :root {
   font-size: 16px;
   --primary-gold: #ffc800;
+  --primary-gold-dark: #eeb500;
 }
 
 body {
@@ -17,6 +18,7 @@ body {
   align-items: center;
   min-height: 100vh;
   font-family: Arial, Helvetica, sans-serif;
+  padding: 50px 20px;
 }
 
 .container {
@@ -46,10 +48,14 @@ body {
 .container .btns-container .btns {
   padding: 10px 25px;
   border: none;
-  background: orange;
+  background: var(--primary-gold);
   font-size: 1rem;
   border-radius: 1000rem;
   cursor: pointer;
+  transition: background 200ms;
+}
+.container .btns-container .btns:hover {
+  background: var(--primary-gold-dark);
 }
 .container .btns-container .btns:disabled {
   background: #999;
@@ -72,10 +78,12 @@ body {
   padding: 0 5px;
 }
 .container .laps-container .laps {
-  background: rgba(153, 153, 153, 0.2);
+  height: 200px;
+  overflow-y: auto;
 }
 .container .laps-container .laps .lap {
   border: none;
+  background: rgba(153, 153, 153, 0.2);
 }
 .container .laps-container .laps .lap span {
   padding: 0 10px;
@@ -84,5 +92,5 @@ body {
   background-color: rgba(153, 153, 153, 0.3333333333);
 }
 .container .laps-container:has(.laps:empty) {
-  display: none;
+  visibility: hidden;
 }/*# sourceMappingURL=style.css.map */

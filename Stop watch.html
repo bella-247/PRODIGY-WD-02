@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop Watch</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    
+    <div class="container">
+        <div id="watch">
+            <p id="time"><span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span>.<span id="milliseconds">00</span></p>
+        </div>
+        <div class="btns-container">
+            <button id="lap-reset-btn" class="btns" disabled>Lap</button>
+            <button id="start-pause-stop-btn" class="btns">Start</button>
+
+        </div>
+        <div class="laps-container">
+            <div class="tabs">
+                <span>Lap</span> <span>Lap times</span> <span>Overall time</span>
+            </div>
+            <div class="laps">
+                <div class="lap">
+                    <span>01</span> <span>00:01:00.59</span> <span>00:01:00.59</span>
+                </div>
+                <div class="lap">
+                    <span>01</span> <span>00:01:00.59</span> <span>00:01:00.59</span>
+                </div>
+                <div class="lap">
+                    <span>01</span> <span>00:01:00.59</span> <span>00:01:00.59</span>
+                </div>
+                <div class="lap">
+                    <span>01</span> <span>00:01:00.59</span> <span>00:01:00.59</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 16px;
+  --primary-gold: #ffc800;
+}
+
+body {
+  background-color: black;
+  color: white !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.container #watch {
+  width: 200px;
+  aspect-ratio: 1/1;
+  border: 2px solid white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container #watch #time {
+  font-size: 2rem;
+}
+.container .btns-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+.container .btns-container .btns {
+  padding: 10px 25px;
+  border: none;
+  background: orange;
+  font-size: 1rem;
+  border-radius: 1000rem;
+  cursor: pointer;
+}
+.container .btns-container .btns:disabled {
+  background: #999;
+  cursor: not-allowed;
+}
+.container .laps-container {
+  display: flex;
+  flex-direction: column;
+  margin: 30px 0;
+}
+.container .laps-container .tabs, .container .laps-container .laps .lap {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+  gap: 20px;
+  padding: 10px;
+  border-bottom: 2px solid rgba(153, 153, 153, 0.6);
+}
+.container .laps-container .tabs span, .container .laps-container .laps .lap span {
+  text-align: center;
+  padding: 0 5px;
+}
+.container .laps-container .laps {
+  background: rgba(153, 153, 153, 0.2);
+}
+.container .laps-container .laps .lap {
+  border: none;
+}
+.container .laps-container .laps .lap span {
+  padding: 0 10px;
+}
+.container .laps-container .laps .lap:nth-of-type(even) {
+  background-color: rgba(153, 153, 153, 0.3333333333);
+}
+.container .laps-container:has(.laps:empty) {
+  display: none;
+}/*# sourceMappingURL=style.css.map */
